@@ -720,7 +720,7 @@ MIT License — See LICENSE file for details.
 
 ## Credits
 
-- **Aether Studio** — Design & Development
+- **Aether Studio** **(Akaz hub)** — Design & Development
 - Inspired by WindUI, Rayfield, and Fluent UI
 
 ---
