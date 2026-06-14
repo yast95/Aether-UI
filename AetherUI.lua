@@ -462,8 +462,10 @@ function AetherUI:CreateWindowInternal(config)
     enterTween:Play()
     
     -- Return window API
+    -- Fix: Components.WindowMethods pouvait être nil → crash "attempt to index nil"
     setmetatable(window, {__index = function(_, key)
-        return Components and Components.WindowMethods[key] or self.WindowMethods[key]
+        local compMethod = Components and Components.WindowMethods and Components.WindowMethods[key]
+        return compMethod or self.WindowMethods[key]
     end})
     
     return window

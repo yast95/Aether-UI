@@ -25,6 +25,27 @@
 
 local Components = {}
 
+-- ═══════════════════════════════════════════════════════════════
+-- WINDOW & TAB WRAPPERS (delegates to AetherUI core)
+-- Fix: ces fonctions étaient appelées mais jamais définies
+-- ═══════════════════════════════════════════════════════════════
+
+--- Crée une Window via le core AetherUI (évite le fallback silencieux)
+function Components.CreateWindow(lib, config)
+    return lib:CreateWindowInternal(config)
+end
+
+--- Crée un Tab via le core AetherUI
+function Components.CreateTab(window, config)
+    return window.Library:CreateTabInternal(window, config)
+end
+
+--- Table vide pour éviter le crash "attempt to index nil value 'WindowMethods'"
+--- dans le metatable de CreateWindowInternal.
+--- Les vraies méthodes (AddTab, Notify, SetTitle...) sont dans AetherUI.WindowMethods
+--- et y restent — cette table sert uniquement de guard.
+Components.WindowMethods = {}
+
 -- Services
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
