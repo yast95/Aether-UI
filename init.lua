@@ -23,7 +23,8 @@
 -- Change BASE_URL pour pointer vers ton hébergeur (GitHub raw, etc.)
 -- ═══════════════════════════════════════════════════════════════
 
-local BASE_URL = "https://raw.githubusercontent.com/yast95/Aether-UI/refs/heads/main/init.lua"
+-- FIXED: Removed "init.lua" from the end so it points to the folder containing your modules
+local BASE_URL = "https://raw.githubusercontent.com/yast95/Aether-UI/refs/heads/main/"
 
 local MODULE_NAMES = {
     "Utils",
@@ -45,7 +46,7 @@ end
 
 local function CanHttpGet()
     local ok = pcall(function()
-        game:GetService("HttpService").HttpEnabled
+        return game:GetService("HttpService").HttpEnabled
     end)
     return ok
 end
