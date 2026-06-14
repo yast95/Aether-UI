@@ -330,6 +330,7 @@ function Utils.RandomInt(min, max)
 end
 
 --- Remap a 0-1 value with easing
+--- FIXED: Replaced "Expo" with "Exponential" and "Circ" with "Circular" for Roblox compatibility
 function Utils.Ease(t, easing)
     easing = easing or "Quart"
     
@@ -345,9 +346,9 @@ function Utils.Ease(t, easing)
         return t * t * t * t * t
     elseif easing == "Sine" then
         return 1 - math.cos(t * math.pi / 2)
-    elseif easing == "Expo" then
+    elseif easing == "Exponential" then
         return 2 ^ (10 * (t - 1))
-    elseif easing == "Circ" then
+    elseif easing == "Circular" then
         return 1 - math.sqrt(1 - t * t)
     elseif easing == "Back" then
         local c1 = 1.70158
