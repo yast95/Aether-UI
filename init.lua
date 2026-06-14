@@ -23,7 +23,7 @@
 -- Change BASE_URL pour pointer vers ton hébergeur (GitHub raw, etc.)
 -- ═══════════════════════════════════════════════════════════════
 
-local BASE_URL = "https://raw.githubusercontent.com/TON_USER/AetherUI/main/AetherUI/"
+local BASE_URL = "https://raw.githubusercontent.com/yast95/Aether-UI/refs/heads/main/init.lua"
 
 local MODULE_NAMES = {
     "Utils",
