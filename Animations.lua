@@ -9,7 +9,7 @@
     ║  - Spring physics simulations                                ║
     ║  - Parallax effects                                          ║
     ║  - Scroll-triggered animations                               ║
-    ╚══════════════════════════════════════════════════════════════╝
+    ╚═════════════════════════════════════════════��════════════════╝
 ]]
 
 local Animations = {}
@@ -180,7 +180,7 @@ Animations.EasingMap = {
     Quart = Enum.EasingStyle.Quart,
     Quint = Enum.EasingStyle.Quint,
     Sine = Enum.EasingStyle.Sine,
-    Expo = Enum.EasingStyle.Expo,
+    Exponential = Enum.EasingStyle.Exponential,
     Circ = Enum.EasingStyle.Circ,
     Back = Enum.EasingStyle.Back,
     Bounce = Enum.EasingStyle.Bounce,
