@@ -9,7 +9,7 @@
     ║  - Spring physics simulations                                ║
     ║  - Parallax effects                                          ║
     ║  - Scroll-triggered animations                               ║
-    ╚═════════════════════════════════════════════��════════════════╝
+    ╚══════════════════════════════════════════════════════════════╝
 ]]
 
 local Animations = {}
@@ -173,6 +173,7 @@ Animations.Easings.SmootherStep = function(t)
 end
 
 -- Map easing names to Enum.EasingStyle
+-- All values conform to official Roblox Enum.EasingStyle nomenclature
 Animations.EasingMap = {
     Linear = Enum.EasingStyle.Linear,
     Quad = Enum.EasingStyle.Quad,
@@ -181,7 +182,7 @@ Animations.EasingMap = {
     Quint = Enum.EasingStyle.Quint,
     Sine = Enum.EasingStyle.Sine,
     Exponential = Enum.EasingStyle.Exponential,
-    Circ = Enum.EasingStyle.Circ,
+    Circular = Enum.EasingStyle.Circular,
     Back = Enum.EasingStyle.Back,
     Bounce = Enum.EasingStyle.Bounce,
     Elastic = Enum.EasingStyle.Elastic,
